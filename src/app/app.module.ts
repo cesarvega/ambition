@@ -4,10 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { AmbitionModule } from './ambition/ambition.module';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatListModule, MatSidenavModule, MatIcon, MatIconModule} from '@angular/material/';
 
 @NgModule({
   declarations: [
@@ -15,13 +14,11 @@ import {MatListModule, MatSidenavModule, MatIcon, MatIconModule} from '@angular/
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatListModule,
-    MatSidenavModule,
-    MatIconModule
+    AngularMaterialModule,
+    AppRoutingModule,
+    AmbitionModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
