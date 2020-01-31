@@ -1,18 +1,14 @@
-<div fxFlex fxLayout="column" fxLayoutWrap fxLayoutGap="10px" fxLayoutAlign="start">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span class="title-center"><img src="assets/images/Cigars.png"></span>
-      <span class="example-spacer"></span>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user
-      </mat-icon>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <div layout="row">
-    <div flex>First item in row</div>
-    <div flex>Second item in row</div>
-  </div>
-  <div layout="column">
-    <div flex>First item in column</div>
-    <div flex>Second item in column</div>
-  </div>
-</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span fxFlex="1 1 auto"></span>
+    <div fxFlex="100%" style="background-color: red;" fxLayout="row" fxLayout.sm="column" fxFlexFill>
+      <div style="background-color: yellow;" fxLayout="row">1</div>
+      <div style="background-color: aqua;" fxLayout="row">
+        <span class="title-center"><img src="assets/images/Cigars.png"></span></div>
+      <div style="background-color: green;" fxLayout="row">
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user
+        </mat-icon>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

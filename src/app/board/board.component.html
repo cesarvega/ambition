@@ -1,0 +1,8 @@
+<h1>Player turn : {{player}}</h1>
+<button class="p-10px" nbButton status="warning" (click)="newGame()">Start new game</button>
+
+<h2 *ngIf="winner">Player {{winner}} wont the game!</h2>
+<main>
+    <app-square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"> {{val}}
+    </app-square>
+</main>
