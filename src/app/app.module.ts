@@ -12,6 +12,11 @@ import { NbThemeModule, NbLayoutModule, NbButtonModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -25,13 +30,19 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     AngularMaterialModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule,
+    UserModule
+
     // AmbitionModule,
-    NbThemeModule.forRoot({ name: 'cosmic' }),
-    NbLayoutModule,
-    NbEvaIconsModule,
-    NbButtonModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
-    
+    // NbThemeModule.forRoot({ name: 'cosmic' }),
+    // NbLayoutModule,
+    // NbEvaIconsModule,
+    // NbButtonModule,
+    // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+
   ],
   providers: [],
   bootstrap: [AppComponent]

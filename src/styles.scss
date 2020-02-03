@@ -75,7 +75,7 @@ $ambition-theme: mat-dark-theme($ambition-primary, $ambition-accent, $ambition-w
 
 
 // Our dark theme
-body.dark-theme {
+dark-theme {
     color: $light-primary-text;
     $dark-primary: mat-palette($mat-yellow);
     $dark-accent: mat-palette($mat-amber, A400, A100, A700);
